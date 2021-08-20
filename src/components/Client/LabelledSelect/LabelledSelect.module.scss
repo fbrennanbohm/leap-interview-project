@@ -1,0 +1,55 @@
+@import './src/common/common.scss';
+
+
+.labelledSelect{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 25px;
+
+  label{
+    @include text-p;
+  }
+
+  select{
+    background: $white;
+    border: 1px solid $border-grey;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 40px;
+    padding: 11px 14px;
+    transition: all 0.50s;
+    @include text-p;
+  }
+
+  [class*='__control'] {
+    border: 1px solid $border-grey;
+    @include text-p;
+    min-height: 40px;
+    border-radius: 6px;
+    &:hover{
+      border-color: $border-grey;
+    }
+  }
+
+  [class*='--is-disabled '] {
+    background-color: $disabled-input-grey;
+    color: $disabled-text-grey;
+  }
+
+  [class*='__menu '] {
+    @include text-p;
+    [class*='__menu-list '] {
+    }
+  }
+}
+
+@media (max-width: $mobile-break){
+  .labelledSelect{
+    grid-column: auto / span 2;
+
+    &.halfColumn{
+      grid-column: auto / span 1;
+    }
+  }
+}

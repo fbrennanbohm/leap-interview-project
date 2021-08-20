@@ -1,0 +1,48 @@
+@import './src/common/common.scss';
+
+.labelledInput{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label{
+    @include text-p;
+  }
+
+  input{
+    background: $white;
+    border: 1px solid $border-grey;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 40px;
+    padding: 11px 14px;
+    transition: all 0.50s;
+    @include text-p;
+    width: 100%;
+
+    &:disabled{
+      background-color: $disabled-input-grey;
+      color: $disabled-text-grey;
+    }
+  }
+
+  input.error{
+    border: 1px solid $red;
+  }
+
+  .errorLabel{
+    @include text-error;
+    color: $red;
+    min-height: 23px;
+  }
+}
+
+@media (max-width: $mobile-break){
+  .labelledInput{
+    grid-column: auto / span 2;
+
+    &.halfColumn{
+      grid-column: auto / span 1;
+    }
+  }
+}

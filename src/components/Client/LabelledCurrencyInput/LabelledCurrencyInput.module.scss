@@ -1,0 +1,72 @@
+@import './src/common/common.scss';
+
+.labelledCurrencyInput{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label{
+    @include text-p;
+  }
+
+  input{
+    background: $white;
+    border: 1px solid $border-grey;
+    border-left: none;
+    box-sizing: border-box;
+    border-radius: 0 6px 6px 0;
+    height: 40px;
+    padding: 11px 14px;
+    transition: all 0.50s;
+    @include text-p;
+    width: 100%;
+
+    &:disabled{
+      background-color: $disabled-input-grey;
+      color: $disabled-text-grey;
+    }
+  }
+
+  input.error{
+    border: 1px solid $red;
+  }
+
+  .errorLabel{
+    @include text-error;
+    color: $red;
+    min-height: 23px;
+  }
+
+  .labelledCurrencyInputContainer{
+    display: flex;
+  }
+
+  .currencyIcon{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    background-color: $disabled-input-grey;
+    border: 1px solid $border-grey;
+    box-sizing: border-box;
+    border-radius: 6px 0 0 6px;
+    place-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Heebo, sans-serif;
+    color: $black;
+  }
+
+  .currencyIconDisabled{
+    color: $disabled-text-grey;
+  }
+}
+
+@media (max-width: $mobile-break){
+  .labelledCurrencyInput{
+    grid-column: auto / span 2;
+
+    &.halfColumn{
+      grid-column: auto / span 1;
+    }
+  }
+}

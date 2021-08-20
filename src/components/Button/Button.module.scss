@@ -1,0 +1,64 @@
+@import 'src/common/common.scss';
+
+.button{
+  height: 40px;
+  padding: 6px 14px;
+  min-width: 79px;
+
+  border: 2px solid #0E5FE3;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  transition: all 0.10s;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &.primary{
+    background-color: $blue;
+    &:active:not([disabled]) {
+      background-color: $white;
+      span{
+        color: $blue;
+      }
+    }
+  }
+
+  &.secondary{
+    background: $white;
+    span{
+      color: $blue;
+    }
+    &:active:not([disabled]) {
+      background-color: $blue;
+      span{
+        color: $white;
+      }
+    }
+  }
+
+  span{
+    @include text-button;
+    color: $white;
+  }
+
+  &.small{
+    height: 32px;
+    padding: 4px 10px;
+  }
+
+  &.special{
+    display: none;
+  }
+
+  &.specialVisible{
+    position: absolute;
+    top: 1%;
+    left: calc(50% - 125px);
+    background-color: $blue;
+
+  }
+}

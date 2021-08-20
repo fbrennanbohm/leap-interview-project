@@ -1,0 +1,53 @@
+
+//fonts with backup/defaults
+$open-sans-font: Open Sans, serif;
+$heebo-font: Heebo, serif;
+
+
+@mixin text-p {
+  font-family: $open-sans-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.01em;
+}
+
+@mixin text-error {
+  font-family: $open-sans-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: -0.01em;
+}
+
+@mixin text-h1 {
+  font-family: $open-sans-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+}
+
+@mixin text-h2 {
+  font-family: $open-sans-font;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+
+@mixin text-button {
+  font-family: $heebo-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+

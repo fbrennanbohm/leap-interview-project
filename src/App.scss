@@ -1,0 +1,32 @@
+@import 'common/common.scss';
+
+.App {
+  background-color: $background-grey;
+  min-height: 100vh;
+  min-width: min-content;
+
+  .main{
+    //height: calc(100vh - #{$header-height});
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+    padding: 40px 0;
+    box-sizing: border-box;
+
+    .content{
+      width: 728px;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: $mobile-break) {
+  .App{
+    .main{
+      .content{
+        width: calc((#{$mobile-break} / 2) - 30px);
+      }
+    }
+  }
+}
