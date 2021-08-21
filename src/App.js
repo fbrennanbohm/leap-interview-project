@@ -27,7 +27,9 @@ function App() {
         if(isEdit){
             formRef.current.handleSubmit();
         }
-        setIsEdit(!isEdit);
+        if((Object.keys(formRef.current.errors).length === 0)){
+            setIsEdit(!isEdit);
+        }
     }
 
     const onBack = () =>{
