@@ -34,7 +34,7 @@ function App() {
 
     const onBack = () =>{
         formRef.current.resetForm();
-        changePageState()
+        setIsEdit(!isEdit);
     }
 
     const onSubmit = (user) =>{

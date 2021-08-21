@@ -51,7 +51,6 @@ const ClientForm = (props) => {
     })
 
     const onSubmitFormik = (values) => {
-        console.log("I am being submitted")
             onSubmit({
                 firstName: values.firstName,
                 lastName: values.lastName,
